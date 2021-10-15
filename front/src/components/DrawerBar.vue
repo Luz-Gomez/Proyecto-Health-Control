@@ -81,6 +81,18 @@ export default {
           ruta: "/IniciarSesion",
           ver: true,
         },
+        {
+          nombre: "Consejos",
+          imagen: "mdi-bell-ring",
+          ruta: "/Consejos",
+          ver: true,
+        },
+        {
+          nombre: "Tips",
+          imagen: "mdi-bell-ring-outline",
+          ruta: "/Tips",
+          ver: true,
+        },
       ],
       itemsUsuario: [
         {
