@@ -21,7 +21,7 @@ mongoose.connect(process.env.DB_URI)
 .then(() => console.log("Conectado a la base de datos"))
 .catch(err => console.error(err));
 
-// Despliegue del front en produccion
+// Despliegue del front en produccion.
 if(process.env.NODE_ENV === "production"){
     app.use(express.static(__dirname+"/site/"));
     app.get("*", (req, res) => {
