@@ -19,8 +19,6 @@ function App() {
           tu perfil, tu índice de masa corporal. Pero no te preocupes, esta información no quedará registrada en el sistema, pero si te permitirá acceder 
           a nuestra página de consejos de salud, donde podremos indicarte que debes hacer en caso de que tu peso, no se encuentre en los valores ideales.
         </p>
-        
-        
       </header>
     </div>
   );
