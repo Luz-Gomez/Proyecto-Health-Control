@@ -1,0 +1,5 @@
+#navbar .dropdown-header {
+    font-size: 60px;
+    display: flex;
+    justify-content: left;
+}
