@@ -1,0 +1,37 @@
+#tomaPresion-container {
+    background-color:  #65B3FC;
+    text-align: left;  
+    width: 100%;
+}
+
+#mail-form {
+    color: white;
+    font-size: 14px;
+}
+
+#datos-presion {
+    color: white;
+    font-size: 14px;
+}
+#guardar {
+    background-color:#FFBE5E;
+    color:whitesmoke;
+    border-radius: 10%;
+}
+
+#tabla {
+    text-align: center;  
+}
+
+h2 {
+    padding: 20px 10px 10px 10px;
+    font-size: 25px;
+    font-family: monospace;
+    color: white;
+}
+
+h4 {
+    font-size: 18px;
+    font-family: monospace;
+    color: white;
+}
