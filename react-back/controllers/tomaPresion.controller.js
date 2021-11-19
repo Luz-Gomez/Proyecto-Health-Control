@@ -36,7 +36,7 @@ exports.find = function(req, res){
 }
 
 exports.findOne = function(req, res){
-    TomaPresion.findOne({_id: req.params.id}, function(err, tomaPresion){
+    TomaPresion.find({mail: req.params.id}, function(err, tomaPresion){
         res.json(tomaPresion)
     })
 }
@@ -64,7 +64,7 @@ exports.update = function(req,res){
 }
 
 exports.remove = function(req, res){
-    TomaPresion.findByIdAndRemove({_id: req.params.id}, function(err){
+    TomaPresion.findByIdAndRemove({mail: req.params.id}, function(err){
         if(err){
             console.error(err),
             response.exito = false,
