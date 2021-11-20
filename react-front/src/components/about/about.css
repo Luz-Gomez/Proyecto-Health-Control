@@ -1,13 +1,8 @@
-.login {
+.about {
     text-align: center;
 }
 
-.inicio-sesion {
-    height: 40vmin;
-    display: flex;
-}
-
-.login-header {
+.about-header {
     background-color: #65B3FC;
     min-height: 100vh;
     display: flex;

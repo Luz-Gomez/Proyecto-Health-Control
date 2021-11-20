@@ -81,7 +81,7 @@ export default class tomaPresion extends React.Component {
                         options={{ 
                             search: true
                         }}
-                    />
+                    ></MaterialTable>
                 </Form>
             </Container>
         );
