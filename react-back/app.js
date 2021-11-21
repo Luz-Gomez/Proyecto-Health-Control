@@ -8,6 +8,7 @@ var database = require("./config/database")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tomaPresionRouter = require('./routes/tomaPresion.router')
+var perfilUsuarioRouter = require('./routes/perfilUsuario.router')
 
 var app = express();
 
@@ -22,6 +23,7 @@ database.mongoConnect();
 
 // Router
 app.use('/tomaPresion', tomaPresionRouter);
+app.use('/perfilUsuario', perfilUsuarioRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
