@@ -1,0 +1,12 @@
+#consultaPresion-container {
+    background-color:  #65B3FC;
+    text-align: left;  
+    width: 100%;
+}
+
+h2 {
+    padding: 20px 10px 10px 10px;
+    font-size: 25px;
+    font-family: monospace;
+    color: white;
+}
