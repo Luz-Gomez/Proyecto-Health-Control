@@ -14,10 +14,10 @@ render() {
     return(
         <Container id="perfilUsuario-container">
             <Row>
-                <h1>Perfil del Usuario</h1>
-                <h2>
+                <h2>Perfil del Usuario</h2>
+                <h4>
                     Completa la informacion de tu perfil y disfruta de nuestros servicios
-                </h2>
+                </h4>
             </Row>
             
             <Row>
@@ -51,8 +51,8 @@ render() {
                 </Row>
             </form>
 
-            <h2>Los datos a continuacion son opcionales</h2>
-            <h2>Si desea que la aplicacion calcule su IMC y Categoria de peso diligencie la siguiente información</h2>
+            <h4>Los datos a continuacion son opcionales</h4>
+            <h4>Si desea que la aplicacion calcule su IMC y Categoria de peso diligencie la siguiente información</h4>
              
             <br />
             <form>
@@ -79,7 +79,7 @@ render() {
                 </Row>
             </form>
 
-            <h2>Si desea que podamos contactarnos con usted, favor indiquenos un numero de celular</h2>
+            <h4>Si desea que podamos contactarnos con usted, favor indiquenos un numero de celular</h4>
 
              <form>
                 <Row id="celular-usuario">
@@ -90,7 +90,7 @@ render() {
                 </Row>
             </form>
 
-            <h2>Si desea que su medico pueda revisar sus datos de presion y peso, indiquenos nombre y apellido</h2>
+            <h4>Si desea que su medico pueda revisar sus datos de presion y peso, indiquenos nombre y apellido</h4>
             
              <form>
             <Row id="datos-medico">

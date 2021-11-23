@@ -7,7 +7,6 @@
 #mail-form {
     color: white;
     font-size: 15px;
-    
 }
 
 #datos-usuario {
@@ -43,8 +42,8 @@ h2 {
     color: white;
 }
 
-h1 {
-    font-size: 35px;
+h4 {
+    font-size: 20px;
     font-family: monospace;
     color: white;
 }
