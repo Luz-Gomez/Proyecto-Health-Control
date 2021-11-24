@@ -6,13 +6,20 @@ import MaterialTable from 'material-table'
 export default class tomaPresion extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
-            pas: '',
-            pad: '',
+
+            tomaPresion: {
+            mail: '',
+            fecha: '',
+            sistole: '',
+            diastole: '',
             pulso: '',
             presion: '',
-        }
+            },
+        };
     }
+
     render() {
         return (
             <Container id="tomaPresion-container">
@@ -39,6 +46,11 @@ export default class tomaPresion extends React.Component {
                 <br />
                 <Form>
                     <Row id="datos-presion">
+                        <Form.Group as={Col}>
+                            <Form.Label>Fecha</Form.Label>
+                            <Form.Control type="date" />
+                        </Form.Group>
+
                         <Form.Group as={Col}>
                             <Form.Label>Sístole</Form.Label>
                             <Form.Control type="number" />
