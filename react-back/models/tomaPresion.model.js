@@ -9,6 +9,7 @@ const TomaPresionSchema = new Schema({
     pulso:{type: Number, required: true},
     presion:{type: String, required: false, max:60}
 });
+
 // Establecemos un campo virtual
 TomaPresionSchema.virtual('fecha_iso')
   .set(function(fechas) {

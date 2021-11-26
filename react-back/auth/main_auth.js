@@ -8,7 +8,7 @@ const auth = (req, res, next) => {
         next()
     } catch (error){
         res.status(401)
-        res.json({code:4, msg:" No tiene autorizacion"})
+        res.json({code:4, msg:"No tiene autorización, ingese con su usuario"})
     }
 }
 

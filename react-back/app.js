@@ -5,9 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var database = require("./config/database");
 var auth = require("./auth/main_auth");
+var cors = require('cors');
 
-var tomaPresionRouter = require('./routes/tomaPresion.router')
-var perfilUsuarioRouter = require('./routes/perfilUsuario.router')
+var tomaPresionRouter = require('./routes/tomaPresion.router');
+var perfilUsuarioRouter = require('./routes/perfilUsuario.router');
+var usuariosRouter = require('./routes/usuarios.router');
 
 var app = express();
 
@@ -22,6 +24,8 @@ app.use(cors());
 database.mongoConnect();
 
 // Router
+app.use('/usuarios', usuariosRouter);
+
 app.use('/tomaPresion', tomaPresionRouter);
 app.use('/perfilUsuario', perfilUsuarioRouter);
 

@@ -4,6 +4,13 @@
     width: 100%;
 }
 
+#tomaPresion-consulta-container {
+    background-color:  #d9e3f3;
+    float: center;
+    text-align: left;  
+    width: 100%;
+}
+
 #mail-form {
     color: white;
     font-size: 14px;
@@ -19,12 +26,7 @@
     border-radius: 10%;
 }
 
-#tabla {
-    text-align: center;  
-}
-
 h2 {
-    padding: 20px 10px 10px 10px;
     font-size: 25px;
     font-family: monospace;
     color: white;
@@ -34,4 +36,18 @@ h4 {
     font-size: 18px;
     font-family: monospace;
     color: white;
+}
+
+.search-Label {
+    float: right;
+    padding-bottom: 10px;
+}
+
+.reac-bs-table-sizePerPage-dropdown .dropdown-toggle{
+    float: left;
+    margin-bottom: 20px;
+}
+
+.sr-only {
+    font-size: 0;
 }

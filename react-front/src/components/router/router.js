@@ -1,33 +1,43 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+//import PrivateRoute from '../Auth/PrivateRoute';
 import TomaPresion from '../../views/tomaPresion/tomaPresion';
 import PerfilUsuario from '../../views/perfilUsuario/perfilUsuario';
-import ConsultaPresion from '../../views/consultaPresion/consultaPresion';
-import PerfilMedico from '../../views/perfilMedico/perfilMedico';
-
-import Tips from '../../views/tips/tips';
+import ConsultaTomaPresion from '../../views/consultaTomaPresion/consultaTomaPresion';
+import PerfilMedico from '../../views/perfilMedico/perfilMedico'
 import Consejos from '../../views/consejos/consejos';
-
+import Tips from '../../views/tips/tips'
 import About from '../about/about';
-import Home from '../home/home';
+import Home from '../home/home'
 import Login from '../login/login';
 
 export default function AppRouter() {
-    return(
-        <Router>
-          <Switch>
-            <Route exact path={["/", "/Home"]} component={Home} />
-            <Route path="/home" exact component={Home} />
-            <Route path="/login" exact component={Login} />
-            <Route path="/about" exact component={About} />
-            <Route path="/tomaPresion" exact component={TomaPresion} />
-            <Route path="/perfilUsuario" exact component={PerfilUsuario} />
-            <Route path="/consultaPresion" exact component={ConsultaPresion} />
-            <Route path="/perfilMedico" exact component={PerfilMedico} />
-            <Route path="/tips" exact component={Tips} />
-            <Route path="/consejos" exact component={Consejos} />
-          </Switch>
-        </Router>
-    );
+  return (
+    <Router>
+      <Switch>
+        <Route exact path={["/", "/Home"]} component={Home} />
+        <Route path="/home" exact component={Home} />
+        <Route path="/login" exact component={Login} />
+        <Route path="/about" exact component={About} />
+
+        {/*            <PrivateRoute exact path={[ "/tomaPresion" ]} component={TomaPresion} /> */}
+
+        <Route path="/tomaPresion" exact component={TomaPresion} />
+        <Route path="/perfilUsuario" exact component={PerfilUsuario} />
+        <Route path="/consultaTomaPresion" exact component={ConsultaTomaPresion} />
+        <Route path="/perfilMedico" exact component={PerfilMedico} />
+        <Route path="/consejos" exact component={Consejos} />
+        <Route path="/tips" exact component={Tips} />
+
+        {/* Ruta de página no encontrada (404) */}
+        <Route path={"*"} component={() => (
+          <h1 style={{ marginTop: 300 }}>
+            404
+            <br />
+            Página no encontrada
+          </h1>
+        )} />
+      </Switch>
+    </Router>
+  );
 }
