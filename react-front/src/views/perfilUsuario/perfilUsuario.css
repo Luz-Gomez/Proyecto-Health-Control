@@ -2,42 +2,20 @@
     background-color:  #65B3FC;
     text-align: left;  
     width: 100%;
-}
-
-#mail-form {
     color: white;
-    font-size: 15px;
-}
-
-#datos-usuario {
-    color: white;
-    font-size: 15px;
-}
-
-#datos-opcionales {
-    color: black;
-    font-size: 15px;
-}
-
-#celular-usuario {
-    color: black;
-    font-size: 15px;
-}
-
-#datos-medico {
-    color: black;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 #botones {
     background-color:#FFBE5E;
     color:whitesmoke;
-    border-radius: 10%;
+    border-radius: 10%; 
+    margin-right: 30px;
 }
 
 h2 {
     padding: 20px 10px 10px 10px;
-    font-size: 25px;
+    font-size: 28px;
     font-family: monospace;
     color: white;
 }

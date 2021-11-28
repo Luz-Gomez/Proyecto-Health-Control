@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import BootstrapTable from 'react-bootstrap-table-next';
 import { request } from '../../components/helper/helper';
 import paginationFactory, { PaginationProvider, PaginationListStandalone,
@@ -40,7 +40,7 @@ export default class Grilla extends React.Component {
 
         return ( 
             <ToolkitProvider
-                id="datos-presion"
+                id="tabla"
                 keyField="tp"
                 data={ this.state.rows }
                 columns={ this.props.columns }
@@ -61,6 +61,11 @@ export default class Grilla extends React.Component {
                            </Col>
                            <Col>
                             <SearchBar { ...props.searchProps } />
+                            </Col>
+                            <Col>
+                            <Button id="grid-button" href="./home">
+                                Regresar
+                            </Button>
                             </Col>
                             </Row>
                             <BootstrapTable

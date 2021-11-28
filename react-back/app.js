@@ -10,6 +10,7 @@ var cors = require('cors');
 var tomaPresionRouter = require('./routes/tomaPresion.router');
 var perfilUsuarioRouter = require('./routes/perfilUsuario.router');
 var usuariosRouter = require('./routes/usuarios.router');
+var perfilMedicoRouter = require('./routes/perfilMedico.router');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/usuarios', usuariosRouter);
 
 app.use('/tomaPresion', tomaPresionRouter);
 app.use('/perfilUsuario', perfilUsuarioRouter);
+app.use('/perfilMedico', perfilMedicoRouter);
 
 app.use(auth);
 

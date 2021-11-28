@@ -7,4 +7,4 @@ const UsuarioSchema = new Schema({
     pass:{type: String, required: true, max:128},
 });
 
-module.exports = mongoose.model("usuarios", UsuarioSchema, "Usuarios");
+module.exports = mongoose.model("usuarios", UsuarioSchema, "usuarios");

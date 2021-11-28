@@ -17,4 +17,4 @@ const perfilUsuarioSchema = new Schema({
     alerta:{type: Boolean, required: false}
 });
 
-module.exports = mongoose.model("perfilUsuario", perfilUsuarioSchema, "perfilUsuario");
+module.exports = mongoose.model("perfilUsuario", perfilUsuarioSchema, "PerfilUsuario");

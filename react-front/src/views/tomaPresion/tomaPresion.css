@@ -2,45 +2,47 @@
     background-color:  #65B3FC;
     text-align: left;  
     width: 100%;
+    margin-top: 20px;
 }
 
 #tomaPresion-consulta-container {
     background-color:  #d9e3f3;
-    float: center;
+    display: flex;
     text-align: left;  
     width: 100%;
 }
 
 #mail-form {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
 
-#datos-presion {
+#tomaPresion-label {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
 }
 #guardar {
     background-color:#FFBE5E;
     color:whitesmoke;
     border-radius: 10%;
+    float: left;
 }
 
-h2 {
+h3 {
     font-size: 25px;
     font-family: monospace;
     color: white;
-}
-
-h4 {
-    font-size: 18px;
-    font-family: monospace;
-    color: white;
+    text-align: center;
 }
 
 .search-Label {
-    float: right;
+    float: center;
     padding-bottom: 10px;
+}
+
+#grid-button{
+    float: right;
+    background-color:#FFBE5E;
 }
 
 .reac-bs-table-sizePerPage-dropdown .dropdown-toggle{
