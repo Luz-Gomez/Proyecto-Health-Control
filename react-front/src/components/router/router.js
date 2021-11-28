@@ -10,6 +10,7 @@ import Tips from '../../views/tips/tips'
 import About from '../about/about';
 import Home from '../home/home'
 import Login from '../login/login';
+import Registro from '../registro/registro';
 
 export default function AppRouter() {
   return (
@@ -19,6 +20,7 @@ export default function AppRouter() {
         <Route path="/home" exact component={Home} />
         <Route path="/login" exact component={Login} />
         <Route path="/about" exact component={About} />
+        <Route path="/registro" exact component={Registro} />
 
         {/*            <PrivateRoute exact path={[ "/tomaPresion" ]} component={TomaPresion} /> */}
 
