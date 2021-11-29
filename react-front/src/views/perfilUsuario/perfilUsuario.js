@@ -118,11 +118,11 @@ render() {
             </Row>
             <br />
 
-            <Button id="botones" >GUARDAR</Button>{'       '}
-            <Button id="botones" >ACTUALIZAR</Button>{'       '}
-            <Button id="botones" >CONSEJOS</Button>{'       '}
-            <Button id="botones" >TOMA PRESIÓN</Button>{'       '}
-            <Button id="botones" >REGRESAR</Button>{'       '}
+            <Button id="botones" >GUARDAR</Button>
+            <Button id="botones" >ACTUALIZAR</Button>
+            <Button id="botones" >CONSEJOS</Button>
+            <Button id="botones" >TOMA PRESIÓN</Button>
+            <Button id="botones" >REGRESAR</Button>
            
             <br />
             <br />

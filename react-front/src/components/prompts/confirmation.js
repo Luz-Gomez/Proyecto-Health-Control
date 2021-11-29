@@ -12,12 +12,19 @@ export default class ConfirmationPrompts extends React.Component {
     }
 
     componentWillReceiveProps(nextProps){
-        if (nextProps.show) this.setState({ show: true });
+        this.setState({ 
+            show: nextProps.show,
+            title: nextProps.title,
+            text: nextProps.text,
+        });
     }
 
     render() {
         return (
-            <Modal show={this.state.show} centered>
+            <Modal show={this.state.show} 
+                centered
+                onHide={() => this.props.onCancel()}
+            >
                 <Modal.Header closeButton>
                     <Modal.Title>{this.state.title}</Modal.Title>
                 </Modal.Header>

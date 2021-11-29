@@ -17,7 +17,8 @@ function Home() {
                     arterial y estar alerta sobre posibles factores de riesgo.
                 </p><br></br>
                 <div className="d-grip gap-2">
-                <Button href="./login" variant="warning" size="lg">Crea tu usuario</Button>
+                <Button href="./login" variant="warning" size="lg">
+                    Ingresa tu usuario</Button>
                 </div><br></br>
                 
                 <p>

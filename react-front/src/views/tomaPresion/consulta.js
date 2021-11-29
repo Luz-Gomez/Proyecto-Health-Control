@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row  } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import DataGrid from '../grid/grid';
 
 const columns = [{
@@ -45,7 +45,7 @@ export default class TomaPresionConsulta extends React.Component {
         return (
             <Container id="tomaPresion-container">
                 <Row>
-                    <h2> Buscar Registro Tomas de presion </h2>
+                    <h3> Consulta tus Registros de Toma de presion </h3>
                 </Row>
                 <Row id="tomaPresion-consulta-container">
                     <DataGrid url="/tomaPresion" 
