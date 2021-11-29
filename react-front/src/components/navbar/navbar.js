@@ -39,8 +39,8 @@ export default class Menu extends React.Component {
                     <NavDropdown.Item href="/consultaTomaPresion">Consulta Registro de Presión</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown.Divider />
-                <Nav.Link href="/consejos">Consejos</Nav.Link>
-                <Nav.Link href="/tips">Tips</Nav.Link>
+                <Nav.Link href="/consejos">Consejos sobre tu peso</Nav.Link>
+                <Nav.Link href="/tips">Tips de presión arterial</Nav.Link>
             </Nav>
             </Offcanvas.Body>
                     </Navbar.Offcanvas>
