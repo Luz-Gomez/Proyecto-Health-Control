@@ -1,3 +1,9 @@
+.consejos {
+    background-color:  #65B3FC;
+    text-align: center;  
+    width: 100%;
+}
+
 .consejos-header {
     background-color: #65B3FC;
     min-height: 100vh;

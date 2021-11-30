@@ -1,5 +1,5 @@
 import React from "react";
-import { Tab, Row, ListGroup, ListGroupItem } from "react-bootstrap";
+import { Container, Tab, Row, ListGroup, ListGroupItem } from "react-bootstrap";
 import "./consejos.css";
 
 export default class Consejos extends React.Component {
@@ -12,7 +12,7 @@ export default class Consejos extends React.Component {
 
   render() {
     return (
-      <div className="consejos">
+      <Container className="consejos">
         <header className="consejos-header">
           <h1>¿Cómo mantener o mejorar el peso?</h1>
           <h2>
@@ -67,8 +67,7 @@ export default class Consejos extends React.Component {
                   <br></br>
                   <il>
                     Haz ejercicio de fortalecimiento muscular, como
-                    levantamiento de pesas. Evita el cardio, ya que este
-                    adelgaza.
+                    levantamiento de pesas. Evita el cardio, te adelgazará más.
                   </il>
                 </Tab.Pane>
                 <Tab.Pane eventKey="#link2">
@@ -111,36 +110,36 @@ export default class Consejos extends React.Component {
                   </il>
                   <br></br>
                   <il>
-                    Come más ensaladas y frutas, reduce considerablemente las harinas y olvídate de la azucar, al menos por un tiempo.
+                    Come más ensaladas y frutas, reduce las harinas y olvídate de la azúcar, al menos por un tiempo.
                   </il>
                   <br></br>
                   <il>
-                  Evita los refrescos industriales y el alcohol al máximo, ya que estos contienen mucha azucar.
+                  Evita los refrescos industriales y el alcohol al máximo, ya que estos contienen mucha azúcar.
                   </il>
                   <br></br>
                   <il>
-                    Reduce la cena y come al menos dos horas antes de dormir. Yogurt griego con galletas integrales o una fruta es suficiente.
+                    Reduce la cena y come dos horas antes de dormir. Yogurt griego, galletas integrales o fruta es suficiente.
                   </il>
                   <br></br>
                   <il>
-                  Realiza ejercicio cardiovascular que te haga sudar mucho para elimar grasa acumulada en el cuerpo.
+                  Realiza ejercicio cardiovascular que te haga sudar mucho para eliminar grasa acumulada en el cuerpo.
                   </il>
                 </Tab.Pane>
                 <Tab.Pane eventKey="#link4">
                   <br></br>
                   <ul className="title">
-                    No lo tomes a mal, pero tienes obesidad. Vamos a solucionarlo siguendo estos consejos:
+                    No lo tomes a mal, pero tienes obesidad. Vamos a solucionarlo:
                   </ul>
                   <il>
-                    Pídele a tu nutricionista que te prepare una dieta relámpago. Está demostrado que ayudan a bajar peso rápidamente.
+                    Pídele a tu nutricionista una dieta relámpago. Está demostrado que ayudan a bajar peso rápidamente.
                   </il>
                   <br></br>
                   <il>
-                    Elimina por completo el azucar de tu vida. Si necesitas endulzar, utiliza miel o stevia, pero en pocas cantidades.
+                    Elimina por completo el azucar de tu vida. Si lo necesitas, utiliza miel o Stevia, pero en pocas cantidades.
                   </il>
                   <br></br>
                   <il>
-                    Bebe al menos un litro de agua al día. Toma un vaso de agua caliente en las mañanas, te ayudará a quemar grasa.
+                    Bebe al menos un litro de agua al día. Un vaso de agua caliente en las mañanas, te ayudará a quemar grasa.
                   </il>
                   <br></br>
                   <il>
@@ -148,14 +147,14 @@ export default class Consejos extends React.Component {
                   </il>
                   <br></br>
                   <il>
-                    Suda mucho haciendo ejercicio cardivascular, llega al límite. Complementa con ejercicios para tonificar tu nuevo cuerpo.
+                    Suda mucho haciendo ejercicio cardivascular, llega al límite. Complementa con ejercicios de tonificación.
                   </il>
                 </Tab.Pane>
               </Tab.Content>
             </Row>
-          </Tab.Container>
+          </Tab.Container><br></br>
         </header>
-      </div>
+      </Container>
     );
   }
 }
