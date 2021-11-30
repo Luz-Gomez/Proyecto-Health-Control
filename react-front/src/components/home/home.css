@@ -1,10 +1,13 @@
 .home {
-    text-align: center;
+    background-color:  #65B3FC;
+    text-align: justify;  
+    width: 100%;
   }
   
   .home-logo {
     height: 40vmin;
     display: flex;
+    align-items: center;
   }
   h2 {
     text-align: center;

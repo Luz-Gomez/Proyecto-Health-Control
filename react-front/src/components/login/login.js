@@ -48,7 +48,7 @@ export default class login extends React.Component {
     render() {
         return (
             <div className="login">
-            <header className="login-header">
+            <header className="login-header"><br></br>
                 <img src={logo} className="inicio-sesion" alt="sesion" />
                 <p>Si eres parte de la comunidad de Health Control, ingresa con tus credenciales</p>
 
@@ -90,7 +90,7 @@ export default class login extends React.Component {
                                 </Form.Group>
 
                                 <Button
-                                    variant="primary"
+                                    variant="warning"
                                     onClick={() => {
                                         this.iniciarSesion();
                                     }}
