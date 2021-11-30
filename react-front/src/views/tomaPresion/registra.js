@@ -59,21 +59,21 @@ export default class TomaPresionRegistra extends React.Component {
   }
 
   calcula_presion() {
-    const pas = this.state.tomaPresion.sistole;
-    const pad = this.state.tomaPresion.diastole;
-
-    if (pas < pad || pas - pad < 15) {
+    var pas =  Number(this.state.tomaPresion.sistole);
+    var pad = Number(this.state.tomaPresion.diastole);
+    
+    if (pas < pad || (pas - pad) < 15) {
       return "Valores incorrectos";
     }
     if (pas <= 90 || pad <= 60) {
       return "Hipotensión";
-    } else if (pas > 90 && pas < 121 && pad > 60 && pad < 81) {
+    } else if (pas > 90 && pas <= 120 && pad > 60 && pad <= 80) {
       return "Normal";
-    } else if (pas > 120 && pas < 130 && pad < 81) {
+    } else if (pas > 120 && pas < 130 && pad <= 80) {
       return "Elevada";
-    } else if ((pas > 129 && pas < 140) || (pad > 79 && pad < 90)) {
+    } else if ((pas >= 130 && pas < 140) || (pad > 80 && pad < 90)) {
       return "Etapa 1 de Hipertensión";
-    } else if ((pas > 139 && pas < 181) || (pad > 99 && pas < 121)) {
+    } else if ((pas >= 140 && pas <= 180) || (pad >= 90 && pas <= 120)) {
       return "Etapa 2 de Hipertensión";
     } else if (pas > 180 || pad > 120) {
       return "Crisis Hipertensiva";

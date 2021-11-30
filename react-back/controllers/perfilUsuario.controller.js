@@ -9,16 +9,16 @@ exports.create = function(req,res){
         mail: req.body.mail,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
-        fecha_nacimiento: req.body.fecha_nacimiento,
+        fechaNacimiento: req.body.fechaNacimiento,
         estatura: req.body.estatura,
         peso: req.body.peso,
-        imc: req.body.imc,
-        categoria_peso: req.body.categoria_peso, 
         celular: req.body.celular,
-        nombre_medico: req.body.nombre_medico,
-        apellido_medico: req.body.apellido_medico,
+        nombreMedico: req.body.nombreMedico,
+        apellidoMedico: req.body.apellidoMedico,
         visibilidad: req.body.visibilidad,
-        alerta: req.body.alerta 
+        alerta: req.body.alerta,
+        imc: req.body.imc,
+        categoriaPeso: req.body.categoriaPeso
     })
 
     perfilUsuario.save(function(err){
@@ -43,25 +43,26 @@ exports.find = function(req, res){
 }
 
 exports.findOne = function(req, res){
-    PerfilUsuario.findOne({mail: req.params.id}, function(err, perfilUsuario){
+    PerfilUsuario.findOne({_id: req.params.id}, function(err, perfilUsuario){
         res.json(perfilUsuario)
     })
 }
 
 exports.update = function(req,res){
     let perfilUsuario = {
+        mail: req.body.mail,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
-        fecha_nacimiento: req.body.fecha_nacimiento,
+        fechaNacimiento: req.body.fechaNacimiento,
         estatura: req.body.estatura,
         peso: req.body.peso,
-        imc: req.body.imc,
-        categoria_peso: req.body.categoria_peso, 
         celular: req.body.celular,
-        nombre_medico: req.body.nombre_medico,
-        apellido_medico: req.body.apellido_medico,
+        nombreMedico: req.body.nombreMedico,
+        apellidoMedico: req.body.apellidoMedico,
         visibilidad: req.body.visibilidad,
-        alerta: req.body.alerta 
+        alerta: req.body.alerta,
+        imc: req.body.imc,
+        categoriaPeso: req.body.categoriaPeso,
     }
 
     PerfilUsuario.findByIdAndUpdate(req.params.id, {$set: perfilUsuario}, function(err){

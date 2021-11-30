@@ -5,16 +5,16 @@ const perfilUsuarioSchema = new Schema({
     mail:{type: String, required: true, max:70},
     nombre:{type: String, required: true, max:60},
     apellido:{type: String, required: true, max:60},
-    fecha_nacimiento:{type: Date, required: true},
-    estatura:{type: Number, required: true},
-    peso:{type: Number, required: true},
-    imc:{type: Number, required: false},
-    categoria_peso:{type: String, required: false, max:20},
+    fechaNacimiento:{type: Date, required: true},
+    estatura:{type: Number, required: false},
+    peso:{type: Number, required: false},
     celular:{type: Number, required: false},
-    nombre_medico:{type: String, required: false, max:60},
-    apellido_medico:{type: String, required: false, max:60},
+    nombreMedico:{type: String, required: false, max:60},
+    apellidoMedico:{type: String, required: false, max:60},
     visibilidad:{type: Boolean, required: false},
-    alerta:{type: Boolean, required: false}
+    alerta:{type: Boolean, required: false},
+    imc:{type: Number, required: false},
+    categoriaPeso:{type: String, required: false, max:20},
 });
 
 module.exports = mongoose.model("perfilUsuario", perfilUsuarioSchema, "PerfilUsuario");
