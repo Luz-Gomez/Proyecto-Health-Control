@@ -26,7 +26,6 @@ database.mongoConnect();
 
 // Router
 app.use('/usuarios', usuariosRouter);
-
 app.use('/tomaPresion', tomaPresionRouter);
 app.use('/perfilUsuario', perfilUsuarioRouter);
 app.use('/perfilMedico', perfilMedicoRouter);

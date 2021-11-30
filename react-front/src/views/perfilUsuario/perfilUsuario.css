@@ -2,8 +2,14 @@
     background-color:  #65B3FC;
     text-align: left;  
     width: 100%;
-    color: white;
-    font-size: 16px;
+    margin-top: 20px;
+}
+
+#perfilUsuario-consulta-container {
+    background-color:  #d9e3f3;
+    display: flex;
+    text-align: left;  
+    width: 100%;
 }
 
 #botones {
@@ -20,8 +26,20 @@ h2 {
     color: white;
 }
 
+h3 {
+    font-size: 30px;
+    font-family: monospace;
+    color: white;
+    text-align: center;
+}
+
 h4 {
     font-size: 20px;
     font-family: monospace;
     color: white;
+}
+
+.reac-bs-table-sizePerPage-dropdown .dropdown-toggle{
+    float: left;
+    margin-bottom: 20px;
 }
