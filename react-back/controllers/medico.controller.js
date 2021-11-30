@@ -1,11 +1,11 @@
-const PerilMedico = require("../models/perfilMedico.model");
+const Medico = require("../models/medico.model");
 let response = {
     msg: "",
     exito: false
 }
 
 exports.create = function(req,res){
-    let perfilMedico = new PerfilMedico({
+    let medico = new Medico({
         mail: req.body.mail,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
@@ -14,14 +14,14 @@ exports.create = function(req,res){
         regInstitucion: req.body.regInstitucion,
         tarjetaProf: req.body.tarjetaProf,
         acepta: req.body.acepta, 
-        alerta: req.body.alerta
+        alerta: req.body.alerta,
     })
 
-    perfilUsuario.save(function(err){
+    medico.save(function(err){
         if(err){
             console.log = false,
             response.exito = false,
-            response.msg = "Error al guardar perfil de medico"
+            response.msg = "Error aqui al guardar perfil de medico"
             res.json(response)
             return;
         }
@@ -33,19 +33,20 @@ exports.create = function(req,res){
 }
 
 exports.find = function(req, res){
-    PerfilMedico.find(function(err, perfilMedico){
-        res.json(perfilMedico)
+    Medico.find(function(err, medico){
+        res.json(medico)
     })
 }
 
 exports.findOne = function(req, res){
-    PerfilMedico.findOne({mail: req.params.id}, function(err, perfilMedico){
-        res.json(perfilMedico)
+    Medico.findOne({_id: req.params.id}, function(err, medico){
+        res.json(medico)
     })
 }
 
 exports.update = function(req,res){
-    let perfilMedico = {
+    let medico = {
+        mail: req.body.mail,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         celular: req.body.celular,
@@ -53,10 +54,10 @@ exports.update = function(req,res){
         regInstitucion: req.body.regInstitucion,
         tarjetaProf: req.body.tarjetaProf,
         acepta: req.body.acepta, 
-        alerta: req.body.alerta
+        alerta: req.body.alerta,
     }
 
-    PerfilMedico.findByIdAndUpdate(req.params.id, {$set: perfilMedico}, function(err){
+    Medico.findByIdAndUpdate(req.params.id, {$set: medico}, function(err){
         if(err){
             console.err(err),
             response.exito = false,
@@ -71,7 +72,7 @@ exports.update = function(req,res){
 }
 
 exports.remove = function(req, res){
-    PerfilMedico.findByIdAndRemove({_id: req.params.id}, function(err){
+    Medico.findByIdAndRemove({_id: req.params.id}, function(err){
         if(err){
             console.error(err),
             response.exito = false,

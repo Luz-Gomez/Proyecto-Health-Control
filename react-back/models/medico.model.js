@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const perfilMedicoSchema = new Schema({
+const medicoSchema = new Schema({
     mail:{type: String, required: true, max:70},
     nombre:{type: String, required: true, max:60},
     apellido:{type: String, required: true, max:60},
@@ -13,4 +13,4 @@ const perfilMedicoSchema = new Schema({
     alerta:{type: Boolean, required: false}
 });
 
-module.exports = mongoose.model("perfilMedico", perfilMedicoSchema, "PerfilMedico");
+module.exports = mongoose.model("medico", medicoSchema, "Medico");

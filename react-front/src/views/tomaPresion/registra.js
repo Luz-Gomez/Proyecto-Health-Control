@@ -158,12 +158,11 @@ export default class TomaPresionRegistra extends React.Component {
                 <Form.Control value={this.state.tomaPresion.presion} />
               </Form.Group>
               <br />
-              <Button id="guardar" onClick={() => console.log(this.guardar())}>
-                Guardar
+              <Button id="grid-button" onClick={() => console.log(this.guardar())} >
+                GUARDAR
               </Button>
-              <Button id="grid-button" href="./home">
-                Regresar
-              </Button>
+              <Button id="grid-button" href="/tips">TIPS</Button>
+              <Button id="grid-button" href="./home">REGRESAR</Button>
             </Form>
             <br /><br />
           </Col>

@@ -35,7 +35,7 @@ export default class Menu extends React.Component {
                 </NavDropdown>
                 <NavDropdown.Divider />
                 <NavDropdown title="Medicos" id="offcanvasNavbarDropdown">
-                    <NavDropdown.Item href="/perfilMedico">Perfíl Médico</NavDropdown.Item>
+                    <NavDropdown.Item href="/medico">Perfíl Médico</NavDropdown.Item>
                     <NavDropdown.Item href="/consultaTomaPresion">Consulta Registro de Presión</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown.Divider />

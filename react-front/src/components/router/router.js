@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import TomaPresion from '../../views/tomaPresion/tomaPresion';
 import PerfilUsuario from '../../views/perfilUsuario/perfilUsuario';
 import ConsultaTomaPresion from '../../views/consultaTomaPresion/consultaTomaPresion';
-import PerfilMedico from '../../views/perfilMedico/perfilMedico'
+
+import Medico from '../../views/medico/medico';
 import Consejos from '../../views/consejos/consejos';
 import Tips from '../../views/tips/tips'
 import About from '../about/about';
@@ -27,7 +28,7 @@ export default function AppRouter() {
         <Route path="/tomaPresion" exact component={TomaPresion} />
         <Route path="/perfilUsuario" exact component={PerfilUsuario} />
         <Route path="/consultaTomaPresion" exact component={ConsultaTomaPresion} />
-        <Route path="/perfilMedico" exact component={PerfilMedico} />
+        <Route path="/medico" exact component={Medico} />
         <Route path="/consejos" exact component={Consejos} />
         <Route path="/tips" exact component={Tips} />
 

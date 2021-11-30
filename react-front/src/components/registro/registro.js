@@ -17,7 +17,7 @@ function Registro () {
                         <img src={usuario} className="usuario" alt="usuario" fluid rounded /></a>
                         <h3>Regístrate como usuario</h3></Col>
                     <Col>
-                    <a href='/perfilMedico'>
+                    <a href='/medico'>
                     <img src={medico} className="medico" alt="medico" fluid rounded /></a>
                     <h3>Regístrate como médico</h3></Col>
                 </Row>

@@ -41,8 +41,10 @@ h3 {
 }
 
 #grid-button{
-    float: right;
     background-color:#FFBE5E;
+    color:whitesmoke;
+    border-radius: 10%; 
+    margin-right: 40px;
 }
 
 .reac-bs-table-sizePerPage-dropdown .dropdown-toggle{
