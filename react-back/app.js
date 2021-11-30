@@ -10,7 +10,7 @@ var cors = require('cors');
 var tomaPresionRouter = require('./routes/tomaPresion.router');
 var perfilUsuarioRouter = require('./routes/perfilUsuario.router');
 var usuariosRouter = require('./routes/usuarios.router');
-var perfilMedicoRouter = require('./routes/perfilMedico.router');
+var medicoRouter = require('./routes/medico.router');
 
 var app = express();
 
@@ -28,7 +28,7 @@ database.mongoConnect();
 app.use('/usuarios', usuariosRouter);
 app.use('/tomaPresion', tomaPresionRouter);
 app.use('/perfilUsuario', perfilUsuarioRouter);
-app.use('/perfilMedico', perfilMedicoRouter);
+app.use('/medico', medicoRouter);
 
 app.use(auth);
 

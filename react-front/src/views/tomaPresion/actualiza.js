@@ -206,19 +206,18 @@ export default class TomaPresionActualiza extends React.Component {
               </Form.Group>
 
               <br />
-              <Button
-                id="guardar"
+              <Button id="grid-button"
                 onClick={() =>
                   this.setState({
                     confirmation: { ...this.state.confirmation, show: true },
-                  })
-                }
-              >
-                {" "}
-                Guardar Cambios
+                  })}>
+                GUARDAR
               </Button>
-              <Button id="grid-button" href="./home">
-                Regresar
+              <Button id="grid-button" href="/tips">
+                TIPS
+              </Button>
+               <Button id="grid-button" href="./home">
+                REGRESAR
               </Button>
             </Form>
             <br /><br />
