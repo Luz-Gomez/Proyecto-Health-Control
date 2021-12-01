@@ -204,15 +204,19 @@ export default class MedicosActualiza extends React.Component {
             />
           </Form.Group>
           <br />
-          <Button
-            variant="primary"
-            onClick={() =>
+          <Button id="grid-button" onClick={() =>
               this.setState({
                 confirmation: { ...this.state.confirmation, show: true },
               })
             }
           >
-            Guardar Cambios
+            GUARDAR
+          </Button>
+          <Button id="grid-button" href="/consultaTomaPresion">
+            CONSULTA TOMAS PRESION
+          </Button>
+          <Button id="grid-button" href="./home">
+            REGRESAR
           </Button>
         </Form>
       </Container>
