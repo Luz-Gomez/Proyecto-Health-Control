@@ -6,14 +6,13 @@ import paginationFactory, { PaginationProvider, PaginationListStandalone,
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import { request } from '../../components/helper/helper';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 import { isUndefined } from 'util';
 import Loading from '../../components/Loading/Loading';
-import '../tomaPresion/tomaPresion';
 
 const { SearchBar } = Search;
 
-export default class DataGrid extends React.Component {
+export default class GridMedico extends React.Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -22,9 +21,6 @@ export default class DataGrid extends React.Component {
         };
         if (this.props.showEditButton && !this.existsColumn('Actualiza'))
             this.props.columns.push(this.getEditButton());
-        
-        if (this.props.showDeletetButton && !this.existsColumn('Eliminar'))
-            this.props.columns.push(this.getDeleteButton());
     }
 
     componentDidMount(){
@@ -59,19 +55,6 @@ export default class DataGrid extends React.Component {
                 return (
                     <Button onClick={() => this.props.onClickEditButton(row)}>
                         <FontAwesomeIcon icon={faEdit} />
-                    </Button>
-                );
-            },
-        };
-    }
-
-    getDeleteButton(){
-        return {
-            text: 'Eliminar',
-            formatter: (cell, row) => {
-                return (
-                    <Button onClick={() => this.props.onClickDeleteButton(row)}>
-                        <FontAwesomeIcon icon={faTrash} />
                     </Button>
                 );
             },

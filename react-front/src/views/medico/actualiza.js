@@ -6,7 +6,7 @@ import MessagePrompt from "../../components/prompts/message";
 import ConfirmationPrompts from "../../components/prompts/confirmation";
 import "./medico.css";
 
-export default class MedicoActualiza extends React.Component {
+export default class MedicosActualiza extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -46,7 +46,7 @@ export default class MedicoActualiza extends React.Component {
   getMedico() {
     this.setState({ loading: true });
     request
-      .get(`/medico/${this.state.idMedico}`)
+      .get(`/medicos/${this.state.idMedico}`)
       .then((response) => {
         this.setState({
           medico: response.data,
@@ -72,9 +72,7 @@ export default class MedicoActualiza extends React.Component {
     this.setState({ loading: true });
     request
       .put(
-        `/medico/${this.state.idMedico}`,
-        this.state.medico
-      )
+        `/medicos/${this.state.idMedico}`, this.state.medico)
       .then((response) => {
         if (response.data.exito) {
           this.props.changeTab("Consulta");
@@ -130,7 +128,7 @@ export default class MedicoActualiza extends React.Component {
         />
         <Loading show={this.state.loading} />
         <Row>
-          <h3>Actualiza tu perfil</h3>
+          <h5>Actualiza Perfil de Medico</h5>
         </Row>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -198,7 +196,7 @@ export default class MedicoActualiza extends React.Component {
               value={this.state.medico.acepta}
               onChange={(e) => this.setValue("acepta", e.target.value)}
             />
-            <br />
+            <br />        
             <Form.Check
               label="Quieres recibir notificaciones en tu correo sobre la actividad de tus pacientes"
               value={this.state.medico.alerta}
@@ -206,15 +204,19 @@ export default class MedicoActualiza extends React.Component {
             />
           </Form.Group>
           <br />
-          <Button
-            variant="primary"
-            onClick={() =>
+          <Button id="grid-button" onClick={() =>
               this.setState({
                 confirmation: { ...this.state.confirmation, show: true },
               })
             }
           >
-            Guardar Cambios
+            GUARDAR
+          </Button>
+          <Button id="grid-button" href="/consultaTomaPresion">
+            CONSULTA TOMAS PRESION
+          </Button>
+          <Button id="grid-button" href="./home">
+            REGRESAR
           </Button>
         </Form>
       </Container>

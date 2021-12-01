@@ -153,7 +153,7 @@ export default class PerfilUsuarioActualiza extends React.Component {
         />
         <Loading show={this.state.loading} />
         <Row>
-          <h3>Actualiza tus datos de Perfil</h3>
+          <h5>Actualiza Datos del Perfil de Usuario</h5>
         </Row>
         <Row>
           <Col
@@ -259,6 +259,7 @@ export default class PerfilUsuarioActualiza extends React.Component {
           <Form.Group as={Col}>
             <Form.Check
               label="Permite que le enviemos alertas a su mail, si no registra datos de toma de presion en 15 dias"
+              type="checkbox"
               value={this.state.perfilUsuario.visibilidad}
               onChange={(e) => this.setValue("visibilidad", e.target.value)}
               onBlur={(e) => this.setValue("categoriaPeso", this.calcula_peso())}
@@ -266,6 +267,7 @@ export default class PerfilUsuarioActualiza extends React.Component {
             <br />
             <Form.Check
               label="Permite que sus datos de IMC y Categoria de peso sean visibles dentro de esta APP, pero no fuera de esta pagina"
+              type="checkbox"
               value={this.state.perfilUsuario.alerta}
               onChange={(e) => this.setValue("alerta", e.target.value)}
               onBlur={(e) => this.setValue("categoriaPeso", this.calcula_peso())}

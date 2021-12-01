@@ -9,7 +9,7 @@ const auth = (req, res, next) => {
     } catch (error){
         res.status(401)
         res.json({
-            code:4, msg:"No tiene autorización, ingese con su usuario y contraseña"
+            code:4, msg:"No tiene autorización, ingrese con su usuario y contraseña"
         })
     }
 }

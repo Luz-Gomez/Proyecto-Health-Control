@@ -13,15 +13,15 @@ exports.create = function(req,res){
         institucion: req.body.institucion,
         regInstitucion: req.body.regInstitucion,
         tarjetaProf: req.body.tarjetaProf,
-        acepta: req.body.acepta, 
-        alerta: req.body.alerta,
+        acepta: req.body.acepta,
+        alerta: req.body.alerta
     })
 
     medico.save(function(err){
         if(err){
             console.log = false,
             response.exito = false,
-            response.msg = "Error aqui al guardar perfil de medico"
+            response.msg = "Error al guardar perfil de medico"
             res.json(response)
             return;
         }
@@ -33,8 +33,8 @@ exports.create = function(req,res){
 }
 
 exports.find = function(req, res){
-    Medico.find(function(err, medico){
-        res.json(medico)
+    Medico.find(function(err, medicos){
+        res.json(medicos)
     })
 }
 
@@ -53,7 +53,7 @@ exports.update = function(req,res){
         institucion: req.body.institucion,
         regInstitucion: req.body.regInstitucion,
         tarjetaProf: req.body.tarjetaProf,
-        acepta: req.body.acepta, 
+        acepta: req.body.acepta,
         alerta: req.body.alerta,
     }
 

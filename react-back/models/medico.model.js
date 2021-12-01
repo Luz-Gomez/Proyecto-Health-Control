@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const medicoSchema = new Schema({
+const MedicosSchema = new Schema({
     mail:{type: String, required: true, max:70},
     nombre:{type: String, required: true, max:60},
     apellido:{type: String, required: true, max:60},
-    celular:{type: Number, required: true, max:40},
+    celular:{type: String, required: true, max:40},
     institucion:{type: String, required: true, max:60},
     regInstitucion:{type: String, required: true, max:60},
     tarjetaProf:{type: String, required: true, max:60},
@@ -13,4 +13,4 @@ const medicoSchema = new Schema({
     alerta:{type: Boolean, required: false}
 });
 
-module.exports = mongoose.model("medico", medicoSchema, "Medico");
+module.exports = mongoose.model("medicos", MedicosSchema);

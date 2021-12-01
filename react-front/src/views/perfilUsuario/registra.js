@@ -25,8 +25,8 @@ export default class PerfilUsuarioRegistra extends React.Component {
         celular: "",
         nombreMedico: "",
         apellidoMedico: "",
-        visibilidad: "",
-        alerta: "",
+        visibilidad: true,
+        alerta: true,
         imc: "",
         categoriaPeso: "",
       },
@@ -104,11 +104,7 @@ export default class PerfilUsuarioRegistra extends React.Component {
         />
         <Loading show={this.state.loading} />
         <Row>
-          <h2>Perfil del Usuario</h2>
-          <h4>
-            Completa la informacion de tu perfil y disfruta de nuestros
-            servicios
-          </h4>
+          <h5>Registra los Datos del Perfil de Usuario</h5>
         </Row>
         <Row>
           <Col

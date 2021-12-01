@@ -1,53 +1,57 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
-import DataGrid from "../grid/grid";
+import GridMedico from "./gridMedico";
 import "./medico.css";
 
 const columns = [
   {
-    dataField: "_id",
-    text: "ID",
+    dataField: '_id',
+    text: 'ID',
     hidden: true,
   },
   {
-    dataField: "mail",
-    text: "Mail",
+    dataField: 'mail',
+    text: 'Mail',
   },
   {
-    dataField: "nombre",
-    text: "Nombre",
+    dataField: 'nombre',
+    text: 'Nombre',
   },
   {
-    dataField: "apellido",
-    text: "Apellido",
+    dataField: 'apellido',
+    text: 'Apellido',
   },
   {
-    dataField: "celular",
-    text: "Celular",
+    dataField: 'celular',
+    text: 'Celular',
   },
   {
-    dataField: "institucion",
-    text: "Institucion",
+    dataField: 'institucion',
+    text: 'Institucion',
   },
   {
-    dataField: "regInstitucion",
-    text: "RegInstitucion",
+    dataField: 'regInstitucion',
+    text: 'RegInstitucion',
+    hidden: true,
   },
   {
-    dataField: "tarjetaProf",
-    text: "tarjetaProf",
+    dataField: 'tarjetaProf',
+    text: 'tarjetaProf',
+    hidden: true,
   },
   {
-    dataField: "acepta",
-    text: "acepta",
+    dataField: 'acepta',
+    text: 'acepta',
+    hidden: true,
   },
   {
-    dataField: "alerta",
-    text: "alerta",
-  },
+    dataField: 'alerta',
+    text: 'alerta',
+    hidden: true,
+  }, 
 ];
 
-export default class MedicoConsulta extends React.Component {
+export default class MedicosConsulta extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -63,13 +67,13 @@ export default class MedicoConsulta extends React.Component {
 
   render() {
     return (
-      <Container id="medico-consulta-container">
+      <Container id="medico-container">
         <Row>
-          <h2> Buscar perfil medico </h2>
+          <h5> Consulta Perfil de Medico </h5>
         </Row>
-        <Row>
-          <DataGrid
-            url="/medico"
+        <Row id="medico-consulta-container">
+          <GridMedico
+            url="/medicos"
             columns={columns}
             showEditButton={true}
             onClickEditButton={this.onClickEditButton}

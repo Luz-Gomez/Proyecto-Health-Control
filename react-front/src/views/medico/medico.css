@@ -1,0 +1,48 @@
+#medico-container {
+    background-color:  #65B3FC;
+    text-align: left;  
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+}
+
+#medico-consulta-container {
+    background-color:  #d9e3f3;
+    display: flex;
+    text-align: left;  
+    width: 100%;
+}
+
+#botones {
+    background-color:#FFBE5E;
+    color: white;
+    border-radius: 10%; 
+    margin-right: 30px;
+}
+
+h2 {
+    padding: 20px 10px 10px 10px;
+    color: white;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    font-size: 20px;
+    font-family: monospace;
+    color: white;
+}
+
+h5 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.reac-bs-table-sizePerPage-dropdown .dropdown-toggle{
+    float: left;
+    margin-bottom: 20px;
+}

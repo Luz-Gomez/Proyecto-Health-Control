@@ -1,15 +1,15 @@
 import React from "react";
 import { Container, Row, Nav } from "react-bootstrap";
-import MedicoConsulta from "./consulta";
-import MedicoRegistra from "./registra";
-import MedicoActualiza from "./actualiza";
+import MedicosConsulta from "./consulta";
+import MedicosRegistra from "./registra";
+import MedicosActualiza from "./actualiza";
 import "./medico.css";
 
-export default class Medico extends React.Component {
+export default class Medicos extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentTab: "Buscar",
+      currentTab: "Consulta",
       _id: null,
     };
     this.changeTab = this.changeTab.bind(this);
@@ -49,14 +49,14 @@ export default class Medico extends React.Component {
         </Row>
         <Row>
           {this.state.currentTab === "Consulta" ? (
-            <MedicoConsulta
+            <MedicosConsulta
               changeTab={this.changeTab}
               setIdMedico={this.setIdMedico}
             />
           ) : this.state.currentTab === "Registra" ? (
-            <MedicoRegistra changeTab={this.changeTab} />
+            <MedicosRegistra changeTab={this.changeTab} />
           ) : (
-            <MedicoActualiza
+            <MedicosActualiza
               changeTab={this.changeTab}
               getIdMedico={this.getIdMedico}
             />

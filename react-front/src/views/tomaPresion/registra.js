@@ -95,7 +95,7 @@ export default class TomaPresionRegistra extends React.Component {
         />
         <Loading show={this.state.loading} />
         <Row>
-          <h3>Registra tus Tomas de Presión Arterial</h3>
+          <h5>Registra tus Tomas de Presión Arterial</h5>
         </Row>
         <Row>
           <Form id="mail-form">

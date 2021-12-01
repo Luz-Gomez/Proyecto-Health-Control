@@ -1,19 +1,29 @@
 import React from 'react';
 import { Navbar, Container, NavDropdown, Offcanvas, Nav } from 'react-bootstrap';
+
+import Cookies from 'universal-cookie'
 import './navbar.css'
+
+const cookies = new Cookies();
 
 export default class Menu extends React.Component {
   constructor(props) {
   super(props);
   this.state = {}
   }
+
+  Logout(){
+    cookies.remove('_s');
+    window.location.reload();
+  }
+
   render() {
      return (
         <Navbar bg="light" expand={false}>
           <Container fluid>
             <Navbar.Toggle aria-controls="offcanvasNavbar" />
             <Navbar.Brand href="#">Health Control</Navbar.Brand>
-            <Navbar.Brand href="#">Cerrar Sesión</Navbar.Brand>
+            <Navbar.Brand>                </Navbar.Brand>
             <Navbar.Offcanvas
                 id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel"
@@ -35,12 +45,16 @@ export default class Menu extends React.Component {
                 </NavDropdown>
                 <NavDropdown.Divider />
                 <NavDropdown title="Medicos" id="offcanvasNavbarDropdown">
-                    <NavDropdown.Item href="/medico">Perfíl Médico</NavDropdown.Item>
+                    <NavDropdown.Item href="/medicos">Perfíl Médico</NavDropdown.Item>
                     <NavDropdown.Item href="/consultaTomaPresion">Consulta Registro de Presión</NavDropdown.Item>
                 </NavDropdown>
                 <NavDropdown.Divider />
                 <Nav.Link href="/consejos">Consejos sobre tu peso</Nav.Link>
                 <Nav.Link href="/tips">Tips de presión arterial</Nav.Link>
+                <NavDropdown.Divider />
+                <Nav.Link 
+                  onClick={() => this.Logout()}>Cerrar Sesión
+                </Nav.Link>
             </Nav>
             </Offcanvas.Body>
                     </Navbar.Offcanvas>

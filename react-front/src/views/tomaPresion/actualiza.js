@@ -105,6 +105,8 @@ export default class TomaPresionActualiza extends React.Component {
     );
   }
 
+  
+
   calcula_presion() {
     var pas =  Number(this.state.tomaPresion.sistole);
     var pad = Number(this.state.tomaPresion.diastole);
@@ -145,7 +147,7 @@ export default class TomaPresionActualiza extends React.Component {
         />
         <Loading show={this.state.loading} />
         <Row>
-          <h3>Actualiza tus Registros de Toma de Presión</h3>
+          <h5>Actualiza tus Registros de Toma de Presión</h5>
         </Row>
         <Form>
           <Form.Group className="mb-3" controlId="formBasicEmail">

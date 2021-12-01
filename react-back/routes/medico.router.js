@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-const medicoController = require("../controllers/medico.controller");
+const medicosController = require("../controllers/medico.controller");
 
-router.post("/", medicoController.create)
-router.get("/", medicoController.find)
-router.get("/:id", medicoController.findOne)
-router.put("/:id", medicoController.update)
-router.delete("/:id", medicoController.remove)
+router.post("/", medicosController.create)
+router.get("/", medicosController.find)
+router.get("/:id", medicosController.findOne)
+router.put("/:id", medicosController.update)
+router.delete("/:id", medicosController.remove)
 
 module.exports = router
