@@ -35,6 +35,12 @@ h3 {
     text-align: center;
 }
 
+h5 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
 .search-Label {
     float: center;
     padding-bottom: 10px;

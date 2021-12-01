@@ -17,11 +17,11 @@ function Registro () {
                         <img src={usuario} className="usuario" alt="usuario" fluid rounded /></a>
                         <h3>Regístrate como usuario</h3></Col>
                     <Col>
-                    <a href='/medico'>
+                    <a href='/medicos'>
                     <img src={medico} className="medico" alt="medico" fluid rounded /></a>
                     <h3>Regístrate como médico</h3></Col>
                 </Row>
-                <p>Clica la imágen</p>
+                <p>Click la imágen</p>
             </Container><br></br>
             
             <p>*Recuerda que si te vas a regsitrar como médico, debes cumplir con ciertos requisitos que nos confirmen que realmente eres un médico.</p>

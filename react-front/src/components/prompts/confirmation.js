@@ -21,7 +21,8 @@ export default class ConfirmationPrompts extends React.Component {
 
     render() {
         return (
-            <Modal show={this.state.show} 
+            <Modal 
+                show={this.state.show} 
                 centered
                 onHide={() => this.props.onCancel()}
             >

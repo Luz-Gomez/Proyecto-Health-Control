@@ -3,6 +3,7 @@
     text-align: left;  
     width: 100%;
     margin-top: 20px;
+    color: white;
 }
 
 #perfilUsuario-consulta-container {
@@ -20,15 +21,11 @@
 }
 
 h2 {
-    padding: 20px 10px 10px 10px;
-    font-size: 28px;
-    
+    padding: 20px 10px 10px 10px;  
     color: white;
 }
 
 h3 {
-    font-size: 30px;
-    font-family: monospace;
     color: white;
     text-align: center;
 }
@@ -37,6 +34,12 @@ h4 {
     font-size: 20px;
     font-family: monospace;
     color: white;
+}
+
+h5 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
 }
 
 .reac-bs-table-sizePerPage-dropdown .dropdown-toggle{

@@ -5,7 +5,7 @@ import Loading from "../../components/Loading/Loading";
 import MessagePrompt from "../../components/prompts/message";
 import "./medico.css";
 
-export default class MedicoRegistra extends React.Component {
+export default class MedicosRegistra extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,8 +23,8 @@ export default class MedicoRegistra extends React.Component {
         institucion: "",
         regInstitucion: "",
         tarjetaProf: "",
-        acepta: "",
-        alerta: "",
+        acepta: true,
+        alerta: true,
       },
     };
     this.onExitedMessage = this.onExitedMessage.bind(this);
@@ -42,7 +42,7 @@ export default class MedicoRegistra extends React.Component {
   guardar() {
     this.setState({ loading: true });
     request
-      .post("/medico", this.state.medico)
+      .post("/medicos", this.state.medico)
       .then((response) => {
         if (response.data.exito) {
           this.setState({
@@ -67,7 +67,7 @@ export default class MedicoRegistra extends React.Component {
 
   render() {
     return (
-      <Container id="pwerfilUsuario-registra-container">
+      <Container id="medico-container">
         <MessagePrompt
           text={this.state.message.text}
           show={this.state.message.show}
@@ -76,16 +76,21 @@ export default class MedicoRegistra extends React.Component {
         />
         <Loading show={this.state.loading} />
         <Row>
-          <h3> Registra datos del medico </h3>
+          <h5> Registra Datos del Perfil de Medico </h5>
         </Row>
         <Form>
-          <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label id="medico-label">Nombre</Form.Label>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label id="medico-label">Mail</Form.Label>
             <Form.Control
               onChange={(e) => this.setValue("mail", e.target.value)}
             />
           </Form.Group>
-
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label id="medico-label">Nombre</Form.Label>
+            <Form.Control
+              onChange={(e) => this.setValue("nombre", e.target.value)}
+            />
+          </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label id="medico-label">Apellido</Form.Label>
             <Form.Control

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row } from 'react-bootstrap';
-import DataGrid from '../grid/grid';
+import GridUsuario from './gridUsuario';
 
 const columns = [{
     dataField: '_id',
@@ -72,10 +72,10 @@ export default class PerfilUsuarioConsulta extends React.Component {
         return (
             <Container id="perfilUsuario-container">
                 <Row>
-                    <h3> Consulta tus datos de perfil </h3>
+                    <h5> Consulta Datos del Perfil de Usuario </h5>
                 </Row>
                 <Row id="perfilUsuario-consulta-container">
-                    <DataGrid url="/perfilUsuario" 
+                    <GridUsuario url="/perfilUsuario" 
                         columns={columns}
                         showEditButton={true}
                         onClickEditButton={this.onClickEditButton} 
