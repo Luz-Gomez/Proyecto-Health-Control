@@ -95,7 +95,10 @@ export default class GridMedico extends React.Component {
                             </Col>
                             <Col>
                             <Button id="grid-button" href="/tomaPresion">
-                                Regitro Toma Presion
+                                Presion
+                            </Button>
+                            <Button id="grid-button" href="/consejos">
+                                Consejos
                             </Button>
                             <Button id="grid-button" href="./home">
                                 Regresar

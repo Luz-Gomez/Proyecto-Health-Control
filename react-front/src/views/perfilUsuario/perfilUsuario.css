@@ -17,7 +17,7 @@
     background-color:#FFBE5E;
     color:whitesmoke;
     border-radius: 10%; 
-    margin-right: 30px;
+    margin-right: 5px;
 }
 
 h2 {
@@ -44,5 +44,5 @@ h5 {
 
 .reac-bs-table-sizePerPage-dropdown .dropdown-toggle{
     float: left;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }

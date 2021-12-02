@@ -111,6 +111,9 @@ export default class DataGrid extends React.Component {
                             <SearchBar { ...props.searchProps } />
                             </Col>
                             <Col>
+                            <Button id="grid-button" href="/Tips">
+                                Tips
+                            </Button>
                             <Button id="grid-button" href="./home">
                                 Regresar
                             </Button>
