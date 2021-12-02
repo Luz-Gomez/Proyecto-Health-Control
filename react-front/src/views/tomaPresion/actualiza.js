@@ -91,7 +91,7 @@ export default class TomaPresionActualiza extends React.Component {
         ...this.state.confirmation,
         show: false,
       },
-    })
+    });
   }
 
   onConfirm() {
@@ -104,8 +104,6 @@ export default class TomaPresionActualiza extends React.Component {
       this.guardar()
     );
   }
-
-  
 
   calcula_presion() {
     var pas =  Number(this.state.tomaPresion.sistole);
@@ -173,6 +171,10 @@ export default class TomaPresionActualiza extends React.Component {
                 <Form.Label id="tomaPresion-label">Sistole</Form.Label>
                 <Form.Control
                   type="number"
+                  placeholder="Valores entre 60 y 250"
+                  min="60"
+                  max="250"
+                  step="1"
                   value={this.state.tomaPresion.sistole}
                   onChange={(e) => this.setValue("sistole", e.target.value)}
                   onBlur={(e) =>
@@ -185,6 +187,10 @@ export default class TomaPresionActualiza extends React.Component {
                 <Form.Label id="tomaPresion-label">Diastole</Form.Label>
                 <Form.Control
                   type="number"
+                  placeholder="Valores entre 30 y 120"
+                  min="30"
+                  max="120"
+                  step="1"
                   value={this.state.tomaPresion.diastole}
                   onChange={(e) => this.setValue("diastole", e.target.value)}
                   onBlur={(e) =>
@@ -197,6 +203,10 @@ export default class TomaPresionActualiza extends React.Component {
                 <Form.Label id="tomaPresion-label">Pulso</Form.Label>
                 <Form.Control
                   type="number"
+                  placeholder="Valores entre 60 y 90"
+                  min="60"
+                  max="90"
+                  step="1"
                   value={this.state.tomaPresion.pulso}
                   onChange={(e) => this.setValue("pulso", e.target.value)}
                 />

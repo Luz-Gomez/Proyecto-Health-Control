@@ -103,7 +103,9 @@ export default class login extends React.Component {
                         </Col>
                     </Row>
                 </Container>
+                {/*
                 <p>¿No tienes cuenta? <a href="/registro">Crea tu usuario</a></p>
+                */}
             </header>
             </div>
         );

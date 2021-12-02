@@ -23,19 +23,19 @@ export default class PerfilUsuarioActualiza extends React.Component {
       },
       loading: false,
       perfilUsuario: {
-        mail: "",
-        nombre: "",
-        apellido: "",
-        fechaNacimiento: "",
-        estatura: "",
-        peso: "",
-        celular: "",
-        nombreMedico: "",
-        apellidoMedico: "",
-        visibilidad: "",
-        alerta:"",
-        imc: "",
-        categoriaPeso: "",
+        mail: '',
+        nombre: '',
+        apellido: '',
+        fechaNacimiento: '',
+        estatura: '',
+        peso: '',
+        celular: '',
+        nombreMedico: '',
+        apellidoMedico: '',
+        visibilidad: true,
+        alerta: true,
+        imc: '',
+        categoriaPeso: '',
       },
     };
     this.onExitedMessage = this.onExitedMessage.bind(this);
@@ -201,6 +201,10 @@ export default class PerfilUsuarioActualiza extends React.Component {
               <Form.Label>Estatura</Form.Label>
               <Form.Control
                 type="number"
+                placeholder="En Metros #.##"
+                min="1"
+                max="2.5"
+                step="0.01"
                 value={this.state.perfilUsuario.estatura}
                 onChange={(e) => this.setValue("estatura", e.target.value)}
               />
@@ -209,6 +213,10 @@ export default class PerfilUsuarioActualiza extends React.Component {
               <Form.Label>Peso</Form.Label>
               <Form.Control
                 type="number"
+                placeholder="En kilos ###.#"
+                min="30"
+                max="300"
+                step="0.1"
                 value={this.state.perfilUsuario.peso}
                 onChange={(e) => this.setValue("peso", e.target.value)}
                 onBlur={(e) => this.setValue("imc", this.calcula_imc())}

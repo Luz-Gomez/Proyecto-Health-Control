@@ -53,6 +53,7 @@ export default class Menu extends React.Component {
                 <Nav.Link href="/tips">Tips de presión arterial</Nav.Link>
                 <NavDropdown.Divider />
                 <Nav.Link 
+                  href="/login"
                   onClick={() => this.Logout()}>Cerrar Sesión
                 </Nav.Link>
             </Nav>

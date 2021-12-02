@@ -130,6 +130,10 @@ export default class TomaPresionRegistra extends React.Component {
                 <Form.Label>Sístole</Form.Label>
                 <Form.Control
                   type="number"
+                  placeholder="Valores entre 60 y 250"
+                  min="60"
+                  max="250"
+                  step="1"
                   onChange={(e) => this.setValue("sistole", e.target.value)}
                 />
               </Form.Group>
@@ -138,6 +142,10 @@ export default class TomaPresionRegistra extends React.Component {
                 <Form.Label>Diástole</Form.Label>
                 <Form.Control
                   type="number"
+                  placeholder="Valores entre 30 y 120"
+                  min="30"
+                  max="120"
+                  step="1"
                   onChange={(e) => this.setValue("diastole", e.target.value)}
                   onBlur={(e) =>
                     this.setValue("presion", this.calcula_presion())
@@ -149,6 +157,10 @@ export default class TomaPresionRegistra extends React.Component {
                 <Form.Label>Pulso</Form.Label>
                 <Form.Control
                   type="number"
+                  placeholder="Valores entre 60 y 90"
+                  min="60"
+                  max="90"
+                  step="1"
                   onChange={(e) => this.setValue("pulso", e.target.value)}
                 />
               </Form.Group>
