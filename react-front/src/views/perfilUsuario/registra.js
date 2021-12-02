@@ -16,19 +16,19 @@ export default class PerfilUsuarioRegistra extends React.Component {
       },
       loading: false,
       perfilUsuario: {
-        mail: "",
-        nombre: "",
-        apellido: "",
-        fechaNacimiento: "",
-        estatura: "",
-        peso: "",
-        celular: "",
-        nombreMedico: "",
-        apellidoMedico: "",
+        mail: '',
+        nombre: '',
+        apellido: '',
+        fechaNacimiento: '',
+        estatura: '',
+        peso: '',
+        celular: '',
+        nombreMedico: '',
+        apellidoMedico: '',
         visibilidad: true,
         alerta: true,
-        imc: "",
-        categoriaPeso: "",
+        imc: '',
+        categoriaPeso: '',
       },
     };
     this.onExitedMessage = this.onExitedMessage.bind(this);
@@ -168,6 +168,10 @@ export default class PerfilUsuarioRegistra extends React.Component {
               <Form.Label>Estatura</Form.Label>
               <Form.Control
                 type="number"
+                placeholder="En metros #.##"
+                min="1.0"
+                max="2.5"
+                step="0.01"
                 onChange={(e) => this.setValue("estatura", e.target.value)}
               />
             </Form.Group>
@@ -175,6 +179,10 @@ export default class PerfilUsuarioRegistra extends React.Component {
               <Form.Label>Peso</Form.Label>
               <Form.Control
                 type="number"
+                placeholder="En kilos ###.#"
+                min="30"
+                max="300"
+                step="0.1"
                 onChange={(e) => this.setValue("peso", e.target.value)}
                 onBlur={(e) => this.setValue("imc", this.calcula_imc())}
               />
